@@ -42,8 +42,11 @@ export default class CreateUser extends Component {
                                 <input
                                     type="text"
                                     className="form-control"
+                                    placeholder="Title"
+                                    name="title"
                                     value={this.state.username}
                                     onChange={this.onChangeUsername}
+                                    required
                                 />
                             </div>
                             <button type="submit" className="btn btn-primary">
