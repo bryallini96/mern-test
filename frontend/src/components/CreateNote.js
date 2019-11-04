@@ -48,6 +48,10 @@ export default class CreateNote extends Component {
 
         window.location.href = '/';
     }
+    onCancel = async (e) => {
+        e.preventDefault();
+        window.location.href = "/";
+    }
     onInputChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -107,6 +111,9 @@ export default class CreateNote extends Component {
                     <form onSubmit={this.onSubmit}>
                         <button type="submit" className="btn btn-primary">
                             Save
+                        </button>
+                        <button type="cancel" className="btn btn-secondary float-right" onClick={this.onCancel}>
+                            Cancel
                         </button>
                     </form>
                 </div>
